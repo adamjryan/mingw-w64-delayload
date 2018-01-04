@@ -33,4 +33,4 @@ mylib-$(ARCH).dll mylib-$(ARCH).def: mylib.o
 	$(CC) -mdll -o mylib-$(ARCH).dll -Wl,--output-def=mylib-$(ARCH).def $^
 
 clean:
-	rm -f *.{def,dll,exe,a,o}
+	rm -f *.def *.dll *.exe *.a *.o
