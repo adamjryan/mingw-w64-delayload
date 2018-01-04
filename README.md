@@ -15,5 +15,5 @@ Build (on Linux) for 32bit target:
 ````
 make ARCH=x86 clean all
 ````
-You will get mylib-x86.dll, myprog-x86.exe and myprogdl-x86.exe. myprogdl-x86.exe should delay-load mylib-x86.dll and myprog-x86.exe
-(existing just for reference) has a direct dependency on mylib-x86.dll instead. Both run fine.
+You will get mylib-x86.dll, myprog-x86.exe and myprogdl-x86.exe. myprogdl-x86.exe **should** delay-load mylib-x86.dll and myprog-x86.exe
+(existing just for reference) has a direct dependency on mylib-x86.dll instead. myprogdl-x86 crashes.
