@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <stdio.h>
 
-BOOL __declspec(dllexport) WINAPI DllMain(HINSTANCE h, DWORD dwReason, LPVOID p) {
+BOOL WINAPI DllMain(HINSTANCE h, DWORD dwReason, LPVOID p) {
     switch (dwReason) {
         case DLL_PROCESS_ATTACH:
             printf("DllMain DLL_PROCESS_ATTACH\n");

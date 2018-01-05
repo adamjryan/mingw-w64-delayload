@@ -27,7 +27,7 @@ myprogdl-$(ARCH).exe: myprog.o mylibdl-$(ARCH).a
 	$(CC) -static -static-libgcc -o $@ $^
 
 mylib-$(ARCH).a mylibdl-$(ARCH).a: mylib-$(ARCH).def
-	$(DLLTOOL) -d $< -D mylib-$(ARCH).dll -l mylib-$(ARCH).a -y mylibdl-$(ARCH).a
+	$(DLLTOOL) -n -d $< -D mylib-$(ARCH).dll -l mylib-$(ARCH).a -y mylibdl-$(ARCH).a
 
 mylib-$(ARCH).dll mylib-$(ARCH).def: mylib.o
 	$(CC) -mdll -o mylib-$(ARCH).dll -Wl,--output-def=mylib-$(ARCH).def $^
