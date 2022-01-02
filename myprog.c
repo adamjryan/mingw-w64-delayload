@@ -1,4 +1,4 @@
-extern int __declspec(dllimport) foo(int bar);
+extern int foo(int bar);
 
 int main(int argc, char**argv) {
     int v = foo(1);
